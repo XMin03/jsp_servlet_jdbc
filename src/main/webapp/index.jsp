@@ -9,7 +9,7 @@
 </h1>
 <br/>
 
-<a href="WEB-INF/jsp/listadoSocios.jsp">Listado de Socios</a>
+<a href="EditarSociosServlet">Listado de Socios</a>
 <br>
 <a href="GrabarSociosServlet">Fomulario de Socio Nuevo</a>
 <br>

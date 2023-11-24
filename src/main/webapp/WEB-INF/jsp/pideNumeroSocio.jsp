@@ -22,8 +22,8 @@
           out.println("<td>" + socio.getLocalidad() + "</td>");
     %>
       <td>
-      <form method="get" action="borraSocio.jsp">
-        <input type="hidden" name="codigo" value="<%=socio.getSocioId() %>"/>
+      <form method="post" action="BorrarSociosServlet">
+        <input type="hidden" name="socioId" value="<%=socio.getSocioId() %>"/>
         <input type="submit" value="borrar">
       </form>
       </td></tr>
