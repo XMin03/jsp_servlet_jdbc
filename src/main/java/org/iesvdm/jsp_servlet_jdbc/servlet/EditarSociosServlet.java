@@ -20,8 +20,8 @@ public class EditarSociosServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/pideNumeroSocio.jsp");
 
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/jsp/formularioEditarSocio.jsp");
         dispatcher.forward(req, resp);
     }
 
@@ -33,12 +33,13 @@ public class EditarSociosServlet extends HttpServlet {
         if (optionalSocio.isPresent()) {
 
             Socio socio = optionalSocio.get();
+            socio.setSocioId(Integer.parseInt(request.getParameter("socioId")));
             this.socioDAO.update(socio);
 
             List<Socio> listado = this.socioDAO.getAll();
             request.setAttribute("listado", listado);
 
-            dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/pideNumeroSocio.jsp");
+            dispatcher = request.getRequestDispatcher("ListarSocioServlet");
         } else {
             request.setAttribute("error", "Error de validación!");
             dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formularioEditarSocio.jsp");

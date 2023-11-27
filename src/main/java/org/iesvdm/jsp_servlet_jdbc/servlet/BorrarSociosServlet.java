@@ -26,7 +26,7 @@ public class BorrarSociosServlet extends HttpServlet {
             List<Socio> listado = this.socioDAO.getAll();
             request.setAttribute("listado", listado);
 
-            dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/pideNumeroSocio.jsp");
+            dispatcher = request.getRequestDispatcher("ListarSocioServlet");
         }catch (NumberFormatException e){
             request.setAttribute("error", "Error de validación!");
             dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formularioSocio.jsp");

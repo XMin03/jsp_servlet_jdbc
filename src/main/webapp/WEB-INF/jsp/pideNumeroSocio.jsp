@@ -10,11 +10,18 @@
   </head>
   <body>
     <table>
-      <tr><th>Código</th><th>Nombre</th><th>Estatura</th><th>Edad</th><th>Localidad</th></tr>
+      <tr><th></th><th>Código</th><th>Nombre</th><th>Estatura</th><th>Edad</th><th>Localidad</th><th></th></tr>
     <%
         List<Socio> listado = (List<Socio>) request.getAttribute("listado");
         for(Socio socio: listado) {
           out.println("<tr><td>");
+        %>
+        <form method="get" action="EditarSociosServlet">
+          <input type="hidden" name="socioId" value="<%=socio.getSocioId() %>"/>
+          <input type="submit" value="Editar">
+        </form>
+        </td><td>
+        <%
           out.println(socio.getSocioId() + "</td>");
           out.println("<td>" + socio.getNombre() + "</td>");
           out.println("<td>" + socio.getEstatura() + "</td>");

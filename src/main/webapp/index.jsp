@@ -9,10 +9,8 @@
 </h1>
 <br/>
 
-<a href="EditarSociosServlet">Listado de Socios</a>
+<a href="ListarSocioServlet">Listado de Socios</a>
 <br>
 <a href="GrabarSociosServlet">Fomulario de Socio Nuevo</a>
-<br>
-<a href="WEB-INF/jsp/pideNumeroSocio.jsp">Listado de Socios</a>
 </body>
 </html>
