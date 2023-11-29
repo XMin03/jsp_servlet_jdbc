@@ -28,8 +28,8 @@ public class BorrarSociosServlet extends HttpServlet {
 
             dispatcher = request.getRequestDispatcher("ListarSocioServlet");
         }catch (NumberFormatException e){
-            request.setAttribute("error", "Error de validación!");
-            dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formularioSocio.jsp");
+            request.setAttribute("error", "Error!");
+            dispatcher = request.getRequestDispatcher("ListadoSocioServlet");
         }
         dispatcher.forward(request,response);
     }

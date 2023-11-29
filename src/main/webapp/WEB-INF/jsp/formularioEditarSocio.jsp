@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: mattialu
@@ -6,13 +7,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<h2>Introduzca los datos del nuevo socio:</h2>
+<!-- ya no se usa -->
+<h2>Introduzca los datos del socio:</h2>
 <form method="post" action="EditarSociosServlet">
     <input type="hidden" name="socioId" value="<%= request.getParameter("socioId")%>">
     Nombre <input type="text" name="nombre"/></br>

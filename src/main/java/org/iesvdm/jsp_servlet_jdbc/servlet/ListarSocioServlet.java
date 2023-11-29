@@ -10,14 +10,14 @@ import org.iesvdm.jsp_servlet_jdbc.model.Socio;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
-
+//clase para listar
 @WebServlet(name = "ListarSocioServlet", value = "/ListarSocioServlet")
 public class ListarSocioServlet extends HttpServlet {
     private SocioDAO socioDAO = new SocioDAOImpl();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        //listar todos
         List<Socio> listado = this.socioDAO.getAll();
         request.setAttribute("listado", listado);
 
@@ -29,13 +29,8 @@ public class ListarSocioServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        List<Socio> listado = this.socioDAO.getAll();
-        request.setAttribute("listado", listado);
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/pideNumeroSocio.jsp");
-
-        dispatcher.forward(request, response);
+        //haran la misma
+        doGet(request,response);
 
     }
 
