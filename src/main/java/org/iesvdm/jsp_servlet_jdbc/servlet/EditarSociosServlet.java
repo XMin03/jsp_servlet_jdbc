@@ -35,6 +35,7 @@ public class EditarSociosServlet extends HttpServlet {
 
             Socio socio = optionalSocio.get();
             socio.setSocioId(Integer.parseInt(request.getParameter("socioId")));
+            //update despues de crear el socio con su id
             this.socioDAO.update(socio);
 
             List<Socio> listado = this.socioDAO.getAll();

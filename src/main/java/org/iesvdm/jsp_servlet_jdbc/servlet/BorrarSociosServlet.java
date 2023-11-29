@@ -21,6 +21,7 @@ public class BorrarSociosServlet extends HttpServlet {
         RequestDispatcher dispatcher = null;
         try {
             int socioId = Integer.parseInt(request.getParameter("socioId"));
+            //borrar segun la id
             this.socioDAO.delete(socioId);
 
             List<Socio> listado = this.socioDAO.getAll();

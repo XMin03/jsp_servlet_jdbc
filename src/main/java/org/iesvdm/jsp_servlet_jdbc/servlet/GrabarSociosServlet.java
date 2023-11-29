@@ -17,6 +17,7 @@ public class GrabarSociosServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //decirle a que enviar
         request.setAttribute("action", "GrabarSociosServlet");
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formularioSocio.jsp");
@@ -41,6 +42,7 @@ public class GrabarSociosServlet extends HttpServlet {
 
             dispatcher = request.getRequestDispatcher("ListarSocioServlet");
         } else {
+            //decirle a que enviar
             request.setAttribute("action", "GrabarSociosServlet");
             request.setAttribute("error", "Error de validación!");
             dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formularioSocio.jsp");
