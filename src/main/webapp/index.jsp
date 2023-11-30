@@ -8,9 +8,9 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-
-<a href="ListarSocioServlet">Listado de Socios</a>
-<br>
-<a href="GrabarSociosServlet">Fomulario de Socio Nuevo</a>
+Redirigiendo. Por favor, espere...
+<%
+    response.sendRedirect("ListarSocioServlet");
+%>
 </body>
 </html>

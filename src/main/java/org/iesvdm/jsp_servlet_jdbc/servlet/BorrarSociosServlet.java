@@ -20,7 +20,7 @@ public class BorrarSociosServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher dispatcher = null;
         try {
-            int socioId = Integer.parseInt(request.getParameter("socioId"));
+            int socioId = Integer.parseInt(request.getParameter("codigo"));
             //borrar segun la id
             this.socioDAO.delete(socioId);
 
@@ -30,7 +30,7 @@ public class BorrarSociosServlet extends HttpServlet {
             dispatcher = request.getRequestDispatcher("ListarSocioServlet");
         }catch (NumberFormatException e){
             request.setAttribute("error", "Error!");
-            dispatcher = request.getRequestDispatcher("ListadoSocioServlet");
+            dispatcher = request.getRequestDispatcher("ListarSocioServlet");
         }
         dispatcher.forward(request,response);
     }

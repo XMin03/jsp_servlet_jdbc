@@ -9,7 +9,6 @@ import org.iesvdm.jsp_servlet_jdbc.model.Socio;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
 //clase para listar
 @WebServlet(name = "ListarSocioServlet", value = "/ListarSocioServlet")
 public class ListarSocioServlet extends HttpServlet {
@@ -21,7 +20,7 @@ public class ListarSocioServlet extends HttpServlet {
         List<Socio> listado = this.socioDAO.getAll();
         request.setAttribute("listado", listado);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/pideNumeroSocio.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/listadoSociosB.jsp");
 
         dispatcher.forward(request, response);
 

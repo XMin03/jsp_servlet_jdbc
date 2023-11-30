@@ -20,7 +20,7 @@ public class GrabarSociosServlet extends HttpServlet {
         //decirle a que enviar
         request.setAttribute("action", "GrabarSociosServlet");
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formularioSocio.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formularioSocioB.jsp");
 
         dispatcher.forward(request, response);
 
@@ -45,7 +45,7 @@ public class GrabarSociosServlet extends HttpServlet {
             //decirle a que enviar
             request.setAttribute("action", "GrabarSociosServlet");
             request.setAttribute("error", "Error de validación!");
-            dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formularioSocio.jsp");
+            dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/formularioSocioB.jsp");
         }
         dispatcher.forward(request,response);
 
