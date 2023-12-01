@@ -9,6 +9,8 @@
   <body>
     <h1>Listado de Socios</h1>
 	<%
+		//desuso
+
 		//CARGA DEL DRIVER Y PREPARACIÓN DE LA CONEXIÓN CON LA BBDD
 		//						v---------UTILIZAMOS LA VERSIÓN MODERNA DE LLAMADA AL DRIVER, no deprecado
 		Class.forName("com.mysql.cj.jdbc.Driver");

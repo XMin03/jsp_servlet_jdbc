@@ -12,6 +12,8 @@
     <table>
       <tr><th></th><th>Código</th><th>Nombre</th><th>Estatura</th><th>Edad</th><th>Localidad</th><th></th></tr>
     <%
+        //desuso
+
         List<Socio> listado = (List<Socio>) request.getAttribute("listado");
         for(Socio socio: listado) {
           out.println("<tr><td>");

@@ -7,6 +7,8 @@
   </head>
   <body>
     <%
+		//desuso
+
     //CÓDIGO DE VALIDACIÓN
     boolean valida = true;
     int codigo = -1;

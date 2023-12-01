@@ -37,10 +37,6 @@ public class EditarSociosServlet extends HttpServlet {
             socio.setSocioId(Integer.parseInt(request.getParameter("codigo")));
             //update despues de crear el socio con su id
             this.socioDAO.update(socio);
-
-            List<Socio> listado = this.socioDAO.getAll();
-            request.setAttribute("listado", listado);
-
             dispatcher = request.getRequestDispatcher("ListarSocioServlet");
         } else {
             //decirle a que enviar

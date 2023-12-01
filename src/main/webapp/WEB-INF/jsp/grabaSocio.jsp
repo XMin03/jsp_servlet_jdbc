@@ -10,7 +10,7 @@
 <body>
 <%
 
-
+        //desuso
     if (valida) {
 
         Connection conn = null;

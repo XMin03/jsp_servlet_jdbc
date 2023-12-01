@@ -24,9 +24,6 @@ public class BorrarSociosServlet extends HttpServlet {
             //borrar segun la id
             this.socioDAO.delete(socioId);
 
-            List<Socio> listado = this.socioDAO.getAll();
-            request.setAttribute("listado", listado);
-
             dispatcher = request.getRequestDispatcher("ListarSocioServlet");
         }catch (NumberFormatException e){
             request.setAttribute("error", "Error!");

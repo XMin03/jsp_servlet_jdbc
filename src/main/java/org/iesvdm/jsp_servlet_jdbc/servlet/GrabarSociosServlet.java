@@ -35,10 +35,8 @@ public class GrabarSociosServlet extends HttpServlet {
         if (optionalSocio.isPresent()) {
 
             Socio socio = optionalSocio.get();
+            //insert
             this.socioDAO.create(socio);
-
-            List<Socio> listado = this.socioDAO.getAll();
-            request.setAttribute("listado", listado);
 
             dispatcher = request.getRequestDispatcher("ListarSocioServlet");
         } else {

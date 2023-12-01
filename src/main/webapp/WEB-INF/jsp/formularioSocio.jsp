@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   </head>
   <body>
+    <!--desuso-->
     <h2>Introduzca los datos del nuevo socio:</h2>
     <form method="post" action="<%=request.getAttribute("action")%>">
       <input type="hidden" name="socioId" value="<%= request.getParameter("socioId")%>">
